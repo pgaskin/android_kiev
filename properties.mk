@@ -331,7 +331,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.vendorprefix=/vendor \
-    ro.vendor.radio.imei.sv=5 \
+    ro.vendor.radio.imei.sv=41 \
     ro.vendor.radio.mbn.load_special_sku=1 \
     persist.radio.call_type=1 \
     persist.radio.mode_pref_nv10=1 \
