@@ -21,8 +21,8 @@ vars="$(cat out/dumpvars-soong.log | grep -E ' build/soong/ui/build/dumpvars\.go
 vers="lineage-$(echo "$vars" | grep "^LINEAGE_VERSION" | cut -d= -f2-)"
 
 sign_target_files_apks -o -d ~/keys/signing $OUT/obj/PACKAGING/target_files_intermediates/*-target_files-*.zip $vers-target.zip
-img_from_target_files signed-target_files.zip $vers-fastbootd.zip
-ota_from_target_files -k ~/keys/signing/releasekey --block --backup=true signed-target_files.zip $vers.zip
+img_from_target_files $vers-target.zip $vers-fastbootd.zip
+ota_from_target_files -k ~/keys/signing/releasekey --block --backup=true $vers-target.zip $vers.zip
 
 {
     printf '**dumpvars**\n\n';
